@@ -34,8 +34,8 @@ const theme = createTheme();
 
 export default function SignInSide() {
  
-  const [name, setName] = useState('')
-  const [password, setPassword] = useState('')
+  const [name, setName] = useState('user1')
+  const [password, setPassword] = useState('pass')
   
   
   const navigate = useNavigate()

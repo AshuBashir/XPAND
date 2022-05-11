@@ -16,25 +16,25 @@ ResponsiveContainer,
 
 const data = [
 {
-  name: "Block A",
+  name: "700",
   l1: 4000,
   l2: 2400,
   amt: 2400,
 },
 {
-  name: "Block B",
+  name: "1000",
   l1: 3000,
   l2: 1398,
   amt: 2210,
 },
 {
-  name: "Block C",
+  name: "1500",
   l1: 2000,
   l2: 9800,
   amt: 2290,
 },
 {
-  name: "Block D",
+  name: "1200",
   l1: 2780,
   l2: 3908,
   amt: 2000,
@@ -46,10 +46,11 @@ const data = [
 const MoreDetails = () => {
   const location = useLocation()
   return (
-  <div className="detailcontainer" style={{display:"grid", gridTemplateColumns:"repeat(2, auto)",color:"white", minHeight:"91vh"}}>
-      <div style={{boxShadow: "white 0px 0px 0px 2px, white 0px 4px 6px -1px, white 0px 1px 0px inset",backgroundColor:"rgba(0, 0, 0, 0.5)", margin:"1rem",width:"20rem", height:"80vh"}}>
+  <div className="detailcontainer">
+      <div className="left-section">
        <img src={location.state.data.urlToImage} alt="person" style={{width:"8rem", marginTop:"2rem", marginLeft:"30%", borderRadius:"50%"}} />
        <h2 style={{color:"white",textAlign:"center", textDecoration:"underline"}}>{location.state.data.scientistName}</h2>  
+       
        {location.state.data.studies ? 
    <div style={{marginLeft:"10%", marginTop:"1rem"}}>
       <h2>Studies</h2>
@@ -70,13 +71,13 @@ const MoreDetails = () => {
    </div> 
 }
 
-  <EmailIcon className="email__icon" style={{position:"relative", top:"20%", left:"36%",border:"2px solid white",cursor:"pointer" , borderRadius:"50%",width:"4rem", height:"4rem", padding:"0rem 1rem"}}/>
+  <EmailIcon className="email__icon" style={{position:"relative", left:"36%",border:"2px solid white",cursor:"pointer" , borderRadius:"50%",width:"4rem", height:"4rem", padding:"0rem 1rem"}}/>
 
 
 </div>
-   <div style={{margin:"1rem", padding:"1rem"}}>
+   <div className="right__section">
     <h2>Description</h2>
-     <p style={{padding:"1rem", width:"870px"}}>{location.state.data.description}</p>
+     <p className="description">{location.state.data.description}</p>
     
      <hr/>   
 
@@ -172,8 +173,8 @@ const MoreDetails = () => {
       {location.state.data.SpaceCraft ?
     <div>
        <h2 style={{padding:"0.5rem 0"}}>Space Craft</h2>
-      <div style={{display:"flex" , gap:"1rem", padding:"2px", boxShadow: "black 0px 4px 10px"}}>
-        <img style={{width:"18rem"}} src={location.state.data.SpaceCraft.spaceImageUrl} alt="spaceship"/>
+      <div className="space_craft_details">
+        <img className="spacecraft__image" style={{width:"18rem"}} src={location.state.data.SpaceCraft.spaceImageUrl} alt="spaceship"/>
        <div style={{lineHeight:"2rem"}}>
           <p style={{ display:"flex", alignItems:"center"}}><ArrowRightAltIcon />Height {location.state.data.SpaceCraft.height}</p>
           <p style={{ display:"flex", alignItems:"center"}}><ArrowRightAltIcon />Diameter {location.state.data.SpaceCraft.diamter}</p>

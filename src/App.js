@@ -36,14 +36,14 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/'  element={<Home />} />
+          <Route path='/'  element={ <Home />} />
           <Route path='/flights' element={user ? <Flights /> : <Login />} />
           <Route path="/ourwork" element={ user ? <Ourwork /> : <Login />} />
           <Route path='/dictionary' element={user ? <DataDictionary /> : <Login />} />
           <Route path='/inspiration4' element={ user ? <InspirationFour data={data} pis={pis}/>  : <Login />}/>
           <Route path='/polaris' element={user ? <Polaris />  : <Login />}/>
           <Route path='/details/:id' element={<SidebarDetails data={data} pis={pis} />} />
-          <Route path='/log-in' element={<Login />} />
+          <Route path='/log-in' element={user ? <Home /> : <Login />} />
           <Route path='/payment' element={<Paypal />} />
 
         </Routes>

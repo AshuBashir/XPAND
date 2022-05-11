@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '@mui/material/Card';
+import Button from "@mui/material/Button";
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -24,7 +25,9 @@ const PisCard = ({pis}) => {
     <CardActions>
       <Link
         to = {`/details/${pis.info.scientistName}`}
-        state={{data: pis.info}}> <InfoIcon style={{color:"white"}}/></Link>
+        state={{data: pis.info}}> <Button variant="contained" sx={{ color: 'white', padding:'2px 2px', width:'55px', textTransform:'capitalize'}}>
+        Explore
+       </Button></Link>
    </CardActions>
   </Card>
   )

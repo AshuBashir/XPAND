@@ -1,9 +1,11 @@
 import React from 'react'
 import Card from '@mui/material/Card';
+import Button from "@mui/material/Button";
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import {Link} from 'react-router-dom'
+
 import InfoIcon from '@material-ui/icons/Info';
 import './InspirationFour.css'
 
@@ -26,7 +28,9 @@ const PersonCard = ({item}) => {
     <CardActions>
       <Link
         to = {`/details/${item.info.scientistName}`}
-        state={{data: item.info}}> <InfoIcon style={{color:"white"}}/></Link>
+        state={{data: item.info}}>    <Button variant="contained" sx={{ color: 'white', padding:'2px 2px', width:'55px', textTransform:'capitalize'}}>
+       Explore
+      </Button></Link>
    </CardActions>
   </Card>
   </>

@@ -47,13 +47,7 @@ const InspirationFour = ({data, pis}) => {
                 Inspiration4
               </Typography>
               <Typography variant="body1" >
-              Inspiration4 is the world’s first all-civilian mission to orbit. The
-          mission will be commanded by Jared Isaacman, the 38-year-old founder
-          and Chief Executive Officer of Shift4 Payments and an accomplished
-          pilot and adventurer. Named in recognition of the four-person crew
-          that will raise awareness and funds for St. Jude Children’s Research
-          Hospital, this milestone represents a new era for human spaceflight
-          and exploration.
+              Inspiration4 is the world’s first all-civilian mission to orbit. The mission will be commanded by Jared Isaacman, the 38-year-old founder and Chief Executive Officer of Shift4 Payments and an accomplished pilot and adventurer. Named in recognition of the four-person crew that will raise awareness and funds for St. Jude Children’s Research Hospital, this milestone represents a new era for human spaceflight and exploration.
          </Typography>
   
             </Grid>
@@ -67,7 +61,7 @@ const InspirationFour = ({data, pis}) => {
     <div>
     
      <div>
-       <h1 style={{color:'white',padding:"0.5rem 1rem", marginLeft:"2rem"}}>Astronauts</h1>
+       <h1  className="inspiration-styling" style={{color:'white',padding:"0.5rem 1rem", marginLeft:"7rem"}}>Astronauts</h1>
         <Grid container spacing={0} justifyContent="center" gap="1rem">
        
         {
@@ -79,7 +73,7 @@ const InspirationFour = ({data, pis}) => {
         </Grid>
     </div>
     <div >
-    <h1 style={{color:'white',padding:"0.5rem 1rem", marginLeft:"2rem"}}>PI'S</h1>
+    <h1 className="inspiration-styling"  style={{color:'white',padding:"0.5rem 1rem",marginLeft:"7rem"}}>PI'S</h1>
      <Grid container spacing={0} justifyContent="center" gap="1rem"> 
      {
         pis.map((pi, index)=>(
